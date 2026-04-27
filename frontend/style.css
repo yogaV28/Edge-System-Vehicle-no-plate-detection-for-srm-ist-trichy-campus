@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f6f8;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.camera-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+video, img {
+    width: 420px;
+    height: auto;
+    border: 2px solid #333;
+    margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+}
+
+.log-btn {
+    margin: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+

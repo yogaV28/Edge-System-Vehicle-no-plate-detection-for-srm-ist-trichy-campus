@@ -1,0 +1,23 @@
+# FastAPI backend + WebSockets
+fastapi
+uvicorn[standard]
+
+# Computer Vision
+opencv-python
+
+# YOLOv8
+ultralytics
+
+# OCR (Tesseract Python binding)
+pytesseract
+
+# Numerical & image utilities
+numpy
+pillow
+
+# Database
+sqlalchemy
+
+# Multipart support (future uploads / APIs)
+python-multipart
+

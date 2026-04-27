@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANPR Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>Automatic Number Plate Recognition</h1>
+
+<div class="container">
+
+    <!-- ================= IN CAMERA ================= -->
+    <div class="camera-box">
+        <h3>IN Camera</h3>
+
+        <select id="inSelect"></select>
+
+        <!-- muted is REQUIRED for browser autoplay -->
+        <div class="video-wrapper">
+            <video id="inVideo" autoplay muted playsinline></video>
+        </div>
+
+        <!-- Detection output from server -->
+        <img id="inResult" alt="IN Camera Detection Output">
+    </div>
+
+    <!-- ================= OUT CAMERA ================= -->
+    <div class="camera-box">
+        <h3>OUT Camera</h3>
+
+        <select id="outSelect"></select>
+
+        <div class="video-wrapper">
+            <video id="outVideo" autoplay muted playsinline></video>
+        </div>
+
+        <img id="outResult" alt="OUT Camera Detection Output">
+    </div>
+
+</div>
+
+<!-- ================= LOG BUTTON ================= -->
+<button class="log-btn" onclick="location.href='/logs'">
+    📋 View Vehicle Logs
+</button>
+
+<!-- ================= SCRIPT ================= -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>

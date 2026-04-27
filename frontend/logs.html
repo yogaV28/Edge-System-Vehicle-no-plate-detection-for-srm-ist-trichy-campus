@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Logs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Vehicle Entry Logs</h1>
+
+<table border="1" align="center" cellpadding="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Vehicle No</th>
+            <th>Status</th>
+            <th>Time IN</th>
+            <th>Time OUT</th>
+            <th>Photo</th>
+        </tr>
+    </thead>
+    <tbody id="logTable"></tbody>
+</table>
+
+<br>
+<button onclick="location.href='/'">⬅ Back</button>
+
+<script>
+fetch("/api/logs")
+.then(res => res.json())
+.then(data => {
+    const table = document.getElementById("logTable");
+    data.forEach(row => {
+        table.innerHTML += `
+            <tr>
+                <td>${row.id}</td>
+                <td>${row.vehicle_no}</td>
+                <td>${row.status}</td>
+                <td>${row.time_in || ""}</td>
+                <td>${row.time_out || ""}</td>
+                <td>
+                    <img src="/${row.image_path}" width="160">
+                </td>
+            </tr>
+        `;
+    });
+});
+</script>
+
+</body>
+</html>
